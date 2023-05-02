@@ -130,7 +130,11 @@ BtnNormal.addEventListener("click",function(){
         titleHighlighted[activeIndex].classList.add('active');
         textHighlighted[activeIndex].classList.add('active');
     }, 3000);
-})
+    BtnReverse.classList.add("deactivate")
+    document.querySelector(".choice-order").classList.add("deactivate")
+    document.querySelector(".your-choice").classList.add("activate")
+}
+)
     
 
 
@@ -152,5 +156,8 @@ BtnReverse.addEventListener("click",function(){
         titleHighlighted[activeIndex].classList.add('active');
         textHighlighted[activeIndex].classList.add('active');
     }, 3000);
+    BtnNormal.classList.add("deactivate")
+    document.querySelector(".choice-order").classList.add("deactivate")
+    document.querySelector(".your-choice").classList.add("activate")
 })
     

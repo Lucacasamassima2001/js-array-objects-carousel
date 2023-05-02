@@ -7,7 +7,14 @@
 
 
 body{
-    background-color: black;
+    background-color: rgb(36, 38, 43);
+}
+
+
+.choice-order{
+	color: white;
+	text-align: center;
+	margin-top: 1em;
 }
 
 .container {
@@ -17,7 +24,7 @@ body{
 }
 
 .btn-container{
-	margin-top: 50px;
+	margin-top: 30px;
 	text-align: center;
 	display: flex;
 	justify-content: center;
@@ -35,7 +42,7 @@ body{
 }
 
 .normal:active{
-	background-color: grey;
+	background-color: rgb(36, 38, 43);
 }
 
 .reverse{
@@ -49,10 +56,25 @@ body{
 }
 
 .reverse:active{
-	background-color: grey;
+	background-color: rgb(36, 38, 43);
+}
+
+.deactivate{
+	display: none;
+}
+
+.your-choice{
+	display: none;
+}
+
+.activate{
+	display: inline;
+	color: white;
+	font-size: 1.5em;
 }
 
 .carousel {
+	margin-top: 50px;
 	display: flex;
 	width: 900px;
 	max-width: 100%;
