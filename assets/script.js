@@ -133,6 +133,7 @@ BtnNormal.addEventListener("click",function(){
     BtnReverse.classList.add("deactivate")
     document.querySelector(".choice-order").classList.add("deactivate")
     document.querySelector(".your-choice").classList.add("activate")
+    document.querySelector(".normal").disabled = true
 }
 )
     
@@ -159,5 +160,7 @@ BtnReverse.addEventListener("click",function(){
     BtnNormal.classList.add("deactivate")
     document.querySelector(".choice-order").classList.add("deactivate")
     document.querySelector(".your-choice").classList.add("activate")
+    document.querySelector(".reverse").disabled = true
+
 })
     
