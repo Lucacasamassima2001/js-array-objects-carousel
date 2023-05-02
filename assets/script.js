@@ -40,6 +40,8 @@ for (let i = 0; i < images.length; i++) {
 
 // selezionimo le immagini nell'html
 const listHighlighted = document.querySelectorAll('.highlighted img');
+const titleHighlighted = document.querySelectorAll('.description h2');
+const textHighlighted = document.querySelectorAll('.description p');
 // selezioniamo le miniature
 const listThumbs = document.querySelectorAll('.thumbs img');
 // selezioniamo i bottoni
@@ -53,32 +55,40 @@ let activeIndex = 0;
 
 btnNext.addEventListener('click',
 	function() {
-		// dall'immagine attiva tolgo la classe active
+		// dall'immagine e testo attivi tolgo la classe active
 		listHighlighted[activeIndex].classList.remove('active');
+        titleHighlighted[activeIndex].classList.remove('active');
+        textHighlighted[activeIndex].classList.remove('active');
 		listThumbs[activeIndex].classList.remove('active');
 		// settiamo il nuovo valore di active index
 		activeIndex++;
 		if (activeIndex >= listHighlighted.length) {
 			activeIndex = 0;
 		}
-		// alla nuova immagine attiva aggiungiamo la classe active
+		// alla nuova immagine e testo attivi aggiungiamo la classe active
 		listHighlighted[activeIndex].classList.add('active');
+        titleHighlighted[activeIndex].classList.add('active');
+        textHighlighted[activeIndex].classList.add('active');
 		listThumbs[activeIndex].classList.add('active');
 	}
 );
 
 btnPrev.addEventListener('click',
 	function() {
-		// dall'immagine attiva tolgo la classe active
+		// dall'immagine e testo attiva tolgo la classe active
 		listHighlighted[activeIndex].classList.remove('active');
+        titleHighlighted[activeIndex].classList.remove('active');
+        textHighlighted[activeIndex].classList.remove('active');
 		listThumbs[activeIndex].classList.remove('active');
 		// settiamo il nuovo valore di active index
 		activeIndex--;
 		if (activeIndex < 0) {
 			activeIndex = listHighlighted.length - 1;
 		}
-		// alla nuova immagine attiva aggiungiamo la classe active
+		// alla nuova immagine e testo attivi aggiungiamo la classe active
 		listHighlighted[activeIndex].classList.add('active');
+        titleHighlighted[activeIndex].classList.add('active');
+        textHighlighted[activeIndex].classList.add('active');
 		listThumbs[activeIndex].classList.add('active');
 	}
 );
@@ -90,9 +100,13 @@ for (let i = 0; i < listThumbs.length; i++) {
 			console.log('cliccata la miniature in posizione ' + i)
 			listHighlighted[activeIndex].classList.remove('active');
 			listThumbs[activeIndex].classList.remove('active');
+            titleHighlighted[activeIndex].classList.remove('active');
+            textHighlighted[activeIndex].classList.remove('active');
 			activeIndex = i;
 			listHighlighted[activeIndex].classList.add('active');
 			listThumbs[activeIndex].classList.add('active');
+            titleHighlighted[activeIndex].classList.add('active');
+            textHighlighted[activeIndex].classList.add('active');
 		}
 	)
 }
