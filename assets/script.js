@@ -111,13 +111,46 @@ for (let i = 0; i < listThumbs.length; i++) {
 	)
 }
 
+// SCORRIMENTO DEL CAROSELLO
+let BtnNormal = document.querySelector(".normal")
+BtnNormal.addEventListener("click",function(){
+    BtnNormal = setInterval(() => {
+        listHighlighted[activeIndex].classList.remove('active');
+        listThumbs[activeIndex].classList.remove('active');
+        titleHighlighted[activeIndex].classList.remove('active');
+        textHighlighted[activeIndex].classList.remove('active');
+        // decido il nuovo valore di active index
+        activeIndex++;
+        if (activeIndex >= listHighlighted.length) {
+            activeIndex = 0;
+        }
+        // alla nuova immagine attiva aggiungo la classe active
+        listHighlighted[activeIndex].classList.add('active');
+        listThumbs[activeIndex].classList.add('active');
+        titleHighlighted[activeIndex].classList.add('active');
+        textHighlighted[activeIndex].classList.add('active');
+    }, 3000);
+})
+    
 
 
-/*
-btnNext ---> al click fai function() {...}
-btnPrev ---> al click fai function() {...}
-thumb0 ----> al click fai function() {...}
-thumb1 ----> al click fai function() {...}
-thumb3 ----> al click fai function() {...}
-thumb4 ----> al click fai function() {...}
-*/
+let BtnReverse = document.querySelector(".reverse")
+BtnReverse.addEventListener("click",function(){
+    BtnReverse = setInterval(() => {
+        listHighlighted[activeIndex].classList.remove('active');
+        listThumbs[activeIndex].classList.remove('active');
+        titleHighlighted[activeIndex].classList.remove('active');
+        textHighlighted[activeIndex].classList.remove('active');
+        // decido il nuovo valore di active index
+        activeIndex--;
+        if (activeIndex < 0) {
+            activeIndex = listHighlighted.length - 1
+        }
+        // alla nuova immagine attiva aggiungo la classe active
+        listHighlighted[activeIndex].classList.add('active');
+        listThumbs[activeIndex].classList.add('active');
+        titleHighlighted[activeIndex].classList.add('active');
+        textHighlighted[activeIndex].classList.add('active');
+    }, 3000);
+})
+    
