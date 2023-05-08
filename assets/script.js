@@ -26,15 +26,15 @@ const containerHighlighted = document.querySelector('.highlighted');
 const containerThumbs = document.querySelector('.thumbs');
 
 for (let i = 0; i < images.length; i++) {
-    let objImage = images[i]
+    let slide = images[i]
 
 	containerHighlighted.innerHTML += 
-    `<img src="assets/${objImage.image}" alt="" class="${i == 0 ? 'active' : ''}">
+    `<img src="assets/${slide.image}" alt="" class="${i == 0 ? 'active' : ''}">
      <div class="description">
-     <h2 class="${i == 0 ? 'active' : ''}">${objImage.title}</h2>
-     <p class="${i == 0 ? 'active' : ''}">${objImage.text}</p>
+     <h2 class="${i == 0 ? 'active' : ''}">${slide.title}</h2>
+     <p class="${i == 0 ? 'active' : ''}">${slide.text}</p>
      </div>`;
-	containerThumbs.innerHTML += `<img src="assets/${objImage.image}" alt="" class="${i == 0 ? 'active' : ''}">`;
+	containerThumbs.innerHTML += `<img src="assets/${slide.image}" alt="" class="${i == 0 ? 'active' : ''}">`;
 }
 
 
@@ -129,7 +129,7 @@ BtnNormal.addEventListener("click",function(){
         listThumbs[activeIndex].classList.add('active');
         titleHighlighted[activeIndex].classList.add('active');
         textHighlighted[activeIndex].classList.add('active');
-    }, 3000);
+    }, 2000);
     BtnReverse.classList.add("deactivate")
     document.querySelector(".choice-order").classList.add("deactivate")
     document.querySelector(".your-choice").classList.add("activate")
@@ -156,7 +156,7 @@ BtnReverse.addEventListener("click",function(){
         listThumbs[activeIndex].classList.add('active');
         titleHighlighted[activeIndex].classList.add('active');
         textHighlighted[activeIndex].classList.add('active');
-    }, 3000);
+    }, 2000);
     BtnNormal.classList.add("deactivate")
     document.querySelector(".choice-order").classList.add("deactivate")
     document.querySelector(".your-choice").classList.add("activate")
